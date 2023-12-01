@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+
+require_once 'config.php';
+
+echo $_SESSION['id'] = session_id();
+//echo $_SESSION['user_id'] = session_id();
+
+echo $_COOKIE['user_id'];
+//setcookie("user_id", '123');
+
+// device
+
+//ip
+?>
 <html>
 <head>
     <script>
