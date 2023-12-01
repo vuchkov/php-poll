@@ -4,15 +4,23 @@ session_start();
 
 require_once 'config.php';
 
-echo $_SESSION['id'] = session_id();
-//echo $_SESSION['user_id'] = session_id();
+/* User Authentication */
 
-echo $_COOKIE['user_id'];
-//setcookie("user_id", '123');
+// Session.
+echo $_SESSION['session_id'] = session_id();
+//echo $_SESSION['user_id'] = mysqli_insert_id();
 
-// device
+// Cookie.
+setcookie("user_id", '123', time()+3600); // Expire in 1 hour.
+//echo $_COOKIE['user_id'];
 
-//ip
+// Device.
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+echo '<br>Device: ' . $user_agent;
+
+// IP.
+
+/* End - User Authentication */
 ?>
 <html>
 <head>
